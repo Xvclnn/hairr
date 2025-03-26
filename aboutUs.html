@@ -544,14 +544,17 @@ Ingl tgsn cn hair n jooxnoro tme xd  -->
           postDiv.className = 'box';
   
           let mediaElement = "";
-          if (/\.(mp4|webm|ogg)$/i.test(post.image)) {
-              let mimeType = post.image.endsWith(".webm") ? "video/webm" : 
-                             post.image.endsWith(".ogg") ? "video/ogg" : 
-                             "video/mp4";
-              mediaElement = `<video controls width="100%">
-                                  <source src="${post.image}" type="${mimeType}">
-                                  Your browser does not support the video tag.
-                              </video>`;
+         if (/\.(mp4|webm|ogg)$/i.test(post.image)) {
+            let mimeType = post.image.endsWith(".webm") ? "video/webm" : 
+                           post.image.endsWith(".ogg") ? "video/ogg" : 
+                           "video/mp4";
+            mediaElement = `<video controls width="100%">
+                                <source src="${post.image}" type="${mimeType}">
+                                Your browser does not support the video tag.
+                            </video>`;
+          } else if (post.image.includes("drive.google.com")) {
+              // Google Drive embed handling
+              mediaElement = `<iframe src="${post.image}" width="640" height="480" allow="autoplay"></iframe>`;
           } else {
               mediaElement = `<img src="${post.image}" alt="Image for ${post.heading}">`;
           }
