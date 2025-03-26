@@ -21,7 +21,16 @@
   font-weight: 400;
   font-style: normal;
 }
-
+.mend p {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  width: 50%;
+  bottom: 0;
+  margin-bottom: 10px;
+  position: fixed;
+}
 .container {
   width: 100vw;
   height: 100vh;
