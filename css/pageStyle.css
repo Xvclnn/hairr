@@ -1,0 +1,295 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.pacifico-regular {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent ;
+}
+.btn {
+  background-color: transparent;
+  color: rgb(36, 45, 53);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 5%;
+  border-radius: 50%;
+}
+.song-name {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px; /* Adjust size if needed */
+  color: white; /* Change color if desired */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adds spacing between buttons */
+  margin-top: 20px; /* Gives some breathing space */
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.playing{
+  font-size: 15px;
+  color: aliceblue;
+  text-align: center;
+  font-family: Pangolin;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: aliceblue;
+}
+.navlist {
+  display: flex;
+}
+.navlist a {
+  font-family: Pacifico;
+  color: white;
+  margin-left: 90px;
+  font-size: 19px;
+  font-weight: 550;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+}
+.navlist a:hover {
+  border-bottom: 2px solid rgb(229, 196, 196);
+}
+#menu-icon {
+  color: white;
+  font-size: 25px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+.intro {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #dc1d65, #e46aa6, #e3a2d6, #e8d3f3, #ffffff);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+section {
+  padding: 0 19%;
+}
+.intro-text h1{
+  font-family: Pacifico;
+  font-size: 40px;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.intro-picture img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-left: 80px;
+}
+
+.intro-text a {
+  font-family: Pangolin;
+  display: inline-block;
+  color: white;
+  background: #e65353;
+  border: 1px solid transparent;
+  padding: 6px 40px;
+  line-height: 1.5;
+  border-radius: 40px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+}
+
+.intro-text a:hover {
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 5px;
+  font-size: 22px;
+  color: rgb(63, 63, 63);
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  transition: all 0.55s ease;
+}
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.footer {
+  height: 200px;
+}
+
+@media (min-width: 1535px) {
+  header {
+    padding: 15px 3%;
+    transition: .2s;
+  }
+  .scroll-down {
+    right: 3%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1460px) {
+  section {
+    padding: 0px 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px) {
+  .intro-picture img{
+    width: 100%;
+    height: auto;
+  }
+  .intro-text h1{
+    font-size: 75px;
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 1195px) {
+  section {
+    padding: 0 3%;
+    transition: .2s;
+  }
+  .intro-text {
+    padding-top: 115px;
+  }
+  .intro-picture {
+    text-align: center;
+  }
+  .intro-picture img {
+    width: 560px;
+    height: auto;
+  }
+  .intro {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .scroll-down {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 990px) {
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 170px;
+    height: 25vh;
+    background: #fd89b0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 20px;
+    transition: all .55s ease;
+    border-radius: 30px;
+  }
+  .navlist a{
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+  }
+  .navlist.open{
+    right: 10px;
+    height: auto;
+  }
+
+  section {
+    padding: 0 3%;
+    transition: 0.2s;
+  }
+  .intro-picture img {
+    width: 300px;
+    height: auto;
+  }
+  .intro {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .intro-text h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 660px) {
+  .intro-picture img{
+    width: 70%;
+    height: auto;
+    margin: 0;
+  }
+  .playing {
+    font-size: 19px;
+    margin-top: 40px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+  .btn:hover {
+    font-size: 16px;
+  }
+}

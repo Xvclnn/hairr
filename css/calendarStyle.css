@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  .pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  .pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+header {
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent ;
+}
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: aliceblue;
+    cursor: pointer;
+}
+.content {
+    top: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+    
+}
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: Pangolin;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+.content p {
+    font-family: Pangolin;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+}
+.content h1 span {
+    color: blanchedalmond;
+    font-family: Pangolin;
+}
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.content button:hover {
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.launch-time {
+    display: flex;
+}
+.launch-time div {
+    flex-basis: 120px;
+}
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -15px;
+}
+.heart1 {
+    width: 225px;
+    position: absolute;
+    right: 12%;
+    bottom: 0;
+    animation: heart 4s linear infinite;
+}
+.heart2 {
+    width: 200px;
+    position: absolute;
+    right: 19%;
+    bottom: 0;
+    animation: heart 3.5s linear infinite;
+}
+.heart3 {
+    width: 150px;
+    position: absolute;
+    right: 9%;
+    bottom: 0;
+    animation: heart 3s linear infinite;
+}
+.heart4 {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: heart 6s linear infinite;
+}
+.heart5 {
+    width: 70px;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    animation: heart 2s linear infinite;
+}
+.heart6 {
+    width: 50px;
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    animation: heart 4s linear infinite;
+}
+@keyframes heart {
+    0% {
+        bottom: 5%;
+        opacity: 0;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+#time-counter {
+    font-size: 24px;
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+@media (min-width: 1535px) {
+    header {
+        padding: 15px 3%;
+    }
+
+    .scroll-down {
+        right: 3%;
+    }
+}
+
+@media (max-width: 1460px) {
+    section {
+        padding: 0 12%;
+    }
+}
+
+@media (max-width: 1340px) {
+    .intro-picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content h1 {
+        font-size: 75px;
+    }
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 170px;
+        height: 25vh;
+        background: #fd89b0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 20px;
+        transition: all 0.55s ease;
+        border-radius: 30px;
+    }
+
+    .intro {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
+    .launch-time div {
+        flex-basis: 140px;
+    }
+    .launch-time div p {
+        font-size: 35px;
+        margin-bottom: -15px;
+    }
+}
+
+@media (max-width: 660px) {
+    .intro-picture img {
+        width: 70%;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .btn:hover {
+        font-size: 16px;
+    }
+}

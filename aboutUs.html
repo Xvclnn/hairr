@@ -1,0 +1,572 @@
+<!-- En delxii deerx xmgiin durtai xvn boloh, mni ireedvin exner, ireedvin xvvxdvvdiin min eej Enxjn geed xuurxn oxindoo 20 nsnyy tursn udriin mend xvrgeyeeeee mni hairaaaaa <3 nahue naasn xuurxn ymbe 20 nas xvrcn ingj bdxor hair xvrd bximaa >-<
+
+Ingl tgsn cn hair n jooxnoro tme xd  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/aboutUsStyle.css">
+  <title>Бидний Тухай</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">J I N E E</a>
+    <ul class="navlist">
+      <li><a href="calendar.html" class="transition-link">Цаг тоолол</a></li>
+      <li><a href="aboutUs.html">Бидний тухай</a></li>
+      <li><a href="aboutYou.html">Чиний тухай</a></li>
+    </ul>
+    
+    <div class="bx bx-menu" id="menu-icon"></div>
+  </header>
+
+  <div class="container">
+      <h1 class="font"><span>&#8212;</span>Бидний хөөрхөн цаг хугацаа<span>&#8212;</span></h1>
+      <p class="quote">Чиний нүдэнд хайлж урсаад, зүрхэнд чинь улам ихээр дурлаад, <br>үнэхээр хайртай гэсэн сэтгэлээ 35хан үсгээр илэрхийлж үл чадна</p>
+      <div class="heart" id="heart">❤️</div>
+  </div>
+
+  <br><br><br><br><br><br>
+    
+  <div class="wrapper"></div>
+
+  <footer  class="qwe">ЧАМАЙГ ГЭХ ❤️ БҮТЭЭВ.</footer>
+
+  <script>
+    const heart = document.getElementById('heart');
+
+    heart.addEventListener('click', () => {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          const flyingHeart = document.createElement('div');
+          flyingHeart.innerHTML = '❤️';
+          flyingHeart.classList.add('flying-heart');
+          flyingHeart.style.top = '50%'; 
+          flyingHeart.style.left = `${Math.random() * 100}%`;
+          flyingHeart.style.setProperty('--x', `${(Math.random() - 0.5) * 200}px`);
+          flyingHeart.style.setProperty('--y', `${-Math.random() * 200 - 50}px`);
+          document.body.appendChild(flyingHeart);
+          setTimeout(() => flyingHeart.remove(), 4000);
+        }, i * 300);
+      }
+    });
+
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.navlist');
+
+    menu.onclick = () => {
+      menu.classList.toggle('bx-x');
+      navlist.classList.toggle('open');
+      if (navlist.classList.contains('open')) {
+          document.body.style.overflow = 'hidden'; 
+      } else {
+          document.body.style.overflow = ''; 
+      }
+    };
+    const sr = ScrollReveal({
+      distance: '64px',
+      duration: 2600,
+      delay: 450,
+      reset: true
+    });
+
+
+
+    sr.reveal('.container', { delay: 150, origin: 'top' });
+    sr.reveal('.font', { delay: 300, origin: 'top' });
+    sr.reveal('.quote', { delay: 450, origin: 'top' });
+    sr.reveal('.heart', { delay: 500, origin: 'top' });
+          
+    const posts = [
+    {
+      heading: "Start. xD",
+      paragraph: "Our Journey аааяяяя ( ͡° ͜ʖ ͡° )",
+      image: "./image/silly.png"
+    },
+    {
+      heading: "Хичээл?",
+      paragraph: "Аймар хөөрхөн охин ирээд л, хичээл заагаач гэхэд нь би худлаа SIGMA царай гаргаснаа дотроо бол аймшигтай баяртайгаар 'за' гээд л хэлж байгаа юм чинь дээ.     .    (๑´• .̫ •ू`๑)",
+      image: "./image/okcat.png"
+    },
+    {
+      heading: "Аймар гоё яриа өрнүүлээд л",
+      paragraph: "Би чинь дотроо 'Ааяя бас гоё хүн юм аа' гээд л, догдолж могдлоод л хх",
+      image: "./image/indeeptalk.png"
+    },
+    {
+      heading: "Гэнэт....",
+      paragraph: "Өөрийгөө гэнэт татагдаад байгаагаа мэдээд л, Юу вэ би чинь... Аая тэгснээ <b>whatever happens, happens</b> аая ахахахах (ʘᗩʘ’)",
+      image: "./image/surprised.gif"
+    },
+    {
+      heading: "SUS",
+      paragraph: "Тэгсэн чинь нөгөө хүн маань бас надад хөөрхөн сэтгэлтэй ай xD. Би чинь аймар сэжиглээд л...  (¬､¬)",
+      image: "./image/sus.png"
+    },
+    {
+      heading: "Ухаарал. ヽ(•‿•)ノ",
+      paragraph: "Нэг л мэдэхэд үерхчихсэн, нөгөө охиндоо аймар хайртай болчихсон, хийсэн юм болгон нь хөөрхөн санагдаад л хД Хайр2 (・ε・`*) …",
+      image: "./image/us.png"
+    },
+    {
+      heading: "Сургуульдヽ(•‿•)ノ",
+      paragraph: "Сургууль дээр зөндөө тэнэг тэнэг зан гаргаж байсан ч хамт байхад үнэхээр ЯНЗТАЙ байдаг байсан шүү хайрааа. Энгэж очмоор байна T-T",
+      image: "./image/hamtymideh.png"
+    },
+    {
+      heading: "За тэгээд л...............",
+      paragraph: ".................... ..................... ..................... ............................. ...................... ....................... ....................................",
+      image: "./image/load.gif"
+    },
+    {
+      heading: "2023:05:29",
+      paragraph: "Аааяяя нөгөө Эгшиг-ийн төрсөн өдрийн өмнө нэг ингэж гарсан даа. Хахаа Нооми псдагын тэр аймар харж байсныг ээ. Одоо бодохоор инээд хүрээд байдагшд ахахахахахах",
+      image: "./image/20230529.png"
+    },
+    {
+      heading: "2023:06:13",
+      paragraph: "Нэг ийм хөөрхөн зураг байна. Миний хайр нааасан хөөөрхөн гарсан юм дээ хД. Гэхдээ нээрээ тэгээд л хөөрхөн танайд л hangout хийдэг байж дээ......... (ㆆ ᴗ ㆆ)",
+      image: "./image/20230613.jpg"
+    },
+    {
+      heading: "2023:06:20",
+      paragraph: "Ahahahah нэг ийм silly юм оллоо. Муу хөөрхөн бацааныг хараад байгаарай (ᗒᗣᗕ)՞",
+      image: "./video/20230620.mp4"
+    },
+    {
+      heading: "2023:07:01",
+      paragraph: "Ааяя парк оржээ хоёулаа. Энэ бараг анх удаагаа хамт орсон нь байх тэээээ (⸝⸝⸝>﹏<⸝⸝⸝)",
+      image: "./video/20230701.mp4"
+    },
+    {
+      heading: "2023:07:01",
+      paragraph: "Тэр үедээ ямар сонин зураг сторидоо хийчихэв ээ гэж бодож билээ хаха. Одоо бодоход хөөрхөн юм ааааааааа <3",
+      image: "./image/yanda.png"
+    },
+    {
+      heading: "2023:07:20",
+      paragraph: "Хулгайлсан шорлог. Хорхойд ч хоргүй намайг хулгай хий гэнэ үү юу гэчихэв ????? хахахахах",
+      image: "./image/shorlog.png"
+    },
+    {
+      heading: "2023:07:25",
+      paragraph: "Хөөрхөн хайртайгаа хамт гоё байсан шүү хД. Өөлхөн энэ тэрүүгээр хөөрхөн хөөрхөн юм хийж яваад нээх хөөрхөн золиг (っ◕‿◕)っ",
+      image: "./image/samgyeopsal.png"
+    },
+    {
+      heading: "2023:07:25",
+      paragraph: "Энэ халуухан охинг хараад байгаачэээ",
+      image: "./image/zugaalga.png"
+    },
+    {
+      heading: "2023:08:05",
+      paragraph: "Barbieeee үзсэээн хоёулаааа. Иаяяя би чинь нулимс унагаагаад ахаха алж өгсөн хД. Гэхдээ нээрээ харих зам ч гоё байсан шүүү <3",
+      image: "./image/barbie1.png"
+    },
+    {
+      heading: "2023:08:11",
+      paragraph: "Дахиад парк орсон байна ХАМТДААА. Аааахх өөрийгөө харахаар уур хүрэх шиг хД. Гэхдээ энэ үедээ буцаж очмоор байна ааааааа",
+      image: "./video/park3.mp4"
+    },
+    {
+      heading: "2023:08:11",
+      paragraph: "Алсыг харагч дээр. Гоё юм аа ххи ヽ(๑◠ܫ◠๑)ﾉ",
+      image: "./video/park2.mp4"
+    },
+    {
+      heading: "2023:08:11",
+      paragraph: "Хараачээ аймар янаг байгаа биз дээ. Хайрыгаа буцаад ирэхээр нь заавал парк орно жүүүүүүүүүү ヽ(๑◠ܫ◠๑)ﾉ",
+      image: "./video/park1.mp4"
+    },
+    {
+      heading: "2023:08:11",
+      paragraph: "Хайрыгаа ширтээд л баймаар байсан жүүүүүү (ꈍ ᴗ ꈍ✿)",
+      image: "./video/park4.mp4"
+    },
+    {
+      heading: "2023:09:01",
+      paragraph: "100 дахь хоногоор хД. Санаж байна уу нөгөө тэр өдөр МУИС дээр уулзах гээд зүг чигээ ололцохгүй балайраад ахахааха. Миний хөөрхөн хайр ч бүр уурлаад, тэгээд би хайрыгаа аргадаад л ааяя (vgvm bolu eswl hahha) Ямартай ч тэгээд ярьж байснаараа муурны кафе орсон тийм ээ. Энэ муурыг хараад л 'Энэ яг Зөнөө' гэж мэгээд ахаха",
+      image: "./video/100day.mp4"
+    },
+    {
+      heading: "2023:09:01",
+      paragraph: "Энэ нөгөө миний хайрын жүлхийг булаасан Биритиш Муужгай ахаха. Гэхдээ аймар хөөрхөн тэ",
+      image: "./image/britishcat.png"
+    },
+    {
+      heading: "2023:09:02",
+      paragraph: "Энэ яг аймар санаж байна шд. Танай гадаа уулзаад байж байсан чинь энэ ус ингэж айхтар хөдлөөд за. Би бүр гайхаад 'Хайраааа энийг хараа (‾-ƪ‾)'",
+      image: "./video/20230902.mp4"
+    },
+    {
+      heading: "2023:09:12",
+      paragraph: "Тэгээд л танай ажил дээр ингээд хөөрхөн2 юм хийгээд л хД. Наана цаана жижиг сажиг юман дээр муудалцаад л хаха. Гэхдээ маш хөөрхөн цаг хугацаа шүү ххи (=^ ◡ ^=)",
+      image: "./video/20230912.mp4"
+    },
+    {
+      heading: "2023:09:19",
+      paragraph: "Миний хөөрхөн overthinker охин (＾º◡º＾✥)",
+      image: "./image/20230919.png"
+    },
+    {
+      heading: "2023:09:24",
+      paragraph: "Ээж гамбир хийж билээ хД Нээх гоё амттай идэж байсан чинь нэг харсан ийм хэлбэртэй болчихсон. Хамгийн түрүүнд толгойд орж ирсэн хайрлуугаа явуулж байгаа нум жин дэээ <3",
+      image: "./image/20230924.png"
+    },
+    {
+      heading: "2023:12:04",
+      paragraph: "Хайрын стори ч нээрээ алт юм аа хД. Ийм хөөрхөн2 юм олохоор хайр хүрэх юм аа гүэ ер (≈ㅇᆽㅇ≈)♡",
+      image: "./image/20231204.png"
+    },
+    {
+      heading: "2023:12:12",
+      paragraph: "Yaayyy ингээд бидний 200 дахь хоногийн ойн баяр ааяяяяя. Уул нь албан ёсоор 12 сарын 10нд байх ёстой байсан л даа. Гэхдээ яасан билээ буруу тооцоолсон байх аа. Ямартай ч 12нд тэмдэглэсэн санагдаж байна. Миний хөөрхөн хайр өсгийтэй гутал өмсөөд, ядаж байхад нөгөө Бэрс сда худраад бүр ахаха, Их fail-дсэн ч гэсэн маш гоё байсан шүү хайраа （＾～＾）",
+      image: "./image/20231212.jpg"
+    },
+    {
+      heading: "2023:12:19",
+      paragraph: "Ахахахах энэ их хөгжилтэй. Хатуу зөөлөнг нь тохируулаад цохиж байсан миний хөөрхөн гүнжийг хараад байгаачэээээээээ >-< Яаж ийм хөөрхөн байдаг байна даа.",
+      image: "./image/20231219.mp4"
+    },
+    {
+      heading: "2023:12:28",
+      paragraph: "Шинэ жил тэмдэглэсэн талаар олдсон ганц зураг нь энэ байлаа T-T Магадгүй хоёулаа илүү их зураг хөрөг татдаг байх хэрэгтэй байх тийм ээ хайраааааа <3",
+      image: "./image/20231228.jpg"
+    },
+    {
+      heading: "2023:??:??",
+      paragraph: "2023 оны өвлийн яг хэзээ нь билээ дээ. Би нөгөө балайраад унтчихдаг хаха. Миний хөөрхөн хайр ч уужуу ухаанаар хандаад тэр өдрийг аварсан даа. Цасаар гулгаад их гоё байсан тийм ээ гүнжээ (っ´ω`c)♡",
+      image: "./image/what1.png"
+    },
+    {
+      heading: "2024:02:04",
+      paragraph: "TavanbogdSl дээр ингээд л хөөрхөн2 байдаг байж билээ дээ. Яг энэ үгд хайр нөгөө толгойны массаж хийдэг сонин юмыг олж мэдээд бараг тавьж мавиад тээ хаха. Миний болохоор гижиг хүрээд хахаа.   Гэхдээ ингээд анзаарахаар миний хайрын инээж байгаа нь бүр ёоооооооооооооооооооооооооо god damnnnnnn ( º﹃º )  Яаж ийм хөөөрхөөннннн байж чаддаг юм бээээээээээээээээээ",
+      image: "./video/20240204.mp4"
+    },
+    {
+      heading: "2024:??:??",
+      paragraph: "Ажил тарчихаад нилээн орой болчихсон, нилээд хуучны 17Б автобусанд суугаад сансар орох гээд явж байхдаа энэ зургыг татаж билээ ххи",
+      image: "./image/what.png"
+    },
+    {
+      heading: "2024:02:09",
+      paragraph: "Заяа-д зориулж хамт яваад guitar авах гээд явж билээ (Хаа ч явсан хамтдааааа ааяя <3) ",
+      image: "./image/20240209.png"
+    },
+    {
+      heading: "2024:02:12",
+      paragraph: "Хайртайгаа уулзчихаад явж байсан байх аа. Нөгөө нарийн замаар гараад ирж байсан чинь нэг ийм хөөрхөн муур бүр надруу меов гээд болдоггүй. Ингээд харсан чинь хуучин манай бэбэ гээд мууртай аягүй төстэй золиг хх",
+      image: "./video/20240212.mp4"
+    },
+    {
+      heading: "2024:??:??",
+      paragraph: "Ахх энэ гэхдээ яг хэзээ юм бол доо. Гэхдээ санаад байгаа байхгүй юу. Нөгөө догбүги-ний газарт тийм ээ хоёулаа ххи. Жаахан мөнгө муутай наана цаана хөөрхөн хөөрхөн болзоо хийгээд л. Хоёулаа ч хөөрхөн хосууд шүү (ノ^∇^)",
+      image: "./video/what3.mp4"
+    },
+    {
+      heading: "2024:??:??",
+      paragraph: "Хаха энэ бас хэзээ юм бол доо ххи. Уул нь он сартай нь хөөрхөн хадгаладаг юмсан хД. Гэхдээ энэ үед ингээд анзаараад байхад овоо хөөрхөн камерны өмнө балайраад муухай хараад шаадаг байсанг бодвол харьцангуй дажгүй байгаа биз хахаха",
+      image: "./video/what4.mp4"
+    },
+    {
+      heading: "2024:04:08",
+      paragraph: "Энэхүү өдөр хоёулаа хүрээлэн орсон байна. Их сайхан цаг агаартай тогтуун байсан санагдаж байна. хД Бас юу билээ хийсэн билүү ахахахаха сайхан хоёр гар шүү хоёулаа ч. Ахэм... Гэхдээ миний хайрыг хараачээ ヾ(´￢｀)ﾉ",
+      image: "./image/20240408.png"
+    },
+    {
+      heading: "2024:04:08",
+      paragraph: "Дахиад нэг ххи <3",
+      image: "./image/20240408a.png"
+    },
+    {
+      heading: "2024:05:19",
+      paragraph: "Санаж байна уу? Хангай хотхонруу хүргэлт хийх гээд нилээн хол алхаж билээ хД. Хүсний 1,4 СБД хавиар хүртэл алхаад л. Зуун айл хавиар билүү дээ, нөгөө нэг сонин шар e-mart шиг том дэлгүүрийн ойр хавиар төөрөөд хаха. Хальт амс хийж байх зуураа авж билээ. Аймар гоё байсан тэгэх үү хайр. Бүр аймшигтайййййййй гоё болзоо байсан. (✿◠‿◠)",
+      image: "./image/20240519.jpg"
+    },
+    {
+      heading: "2024:05:24",
+      paragraph: "Ааяя ингээд л бид хоёрын жилийн ой . . . . . . . . . . . . . .(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧.",
+      image: "./image/20240524.png"
+    },
+    {
+      heading: "2024:05:31",
+      paragraph: "Санаж байгаа биз дээ хайр. Туул гол ороод аймшигтай шавар хөл нүцгэн туулаад хД. Ийм хөөрхөн зураг авж билээ. Энэ үеэр ч янзын гоё болзоо хийсэн дээ хоёулаа . . . ༼ つ ◕_◕ ༽つ",
+      image: "./image/20240531.jpg"
+    },
+    {
+      heading: "2024:05:31",
+      paragraph: "Хайр шавар дээр суучихсан билүү юу билээ. Ямартай ч хөөрхөн бөгс нь ийм болчихсон байсан ххи (⌐ ͡■ ͜ʖ ͡■)",
+      image: "./video/bugs.mp4"
+    },
+    {
+      heading: "2024:06:08",
+      paragraph: "Энэ нөгөө талбай хавиар болзоо хийдэг үе юм байна шүү дээ. Улаанбаатар зочид буудлын урдуур байдаг сандал дээр суугаад маш өөдрөг гоё сэтгэлтэйгээр (ааяя) дээшээ хартал ийм гоё байсан. Тэгээд л зураг дарчихсан хха",
+      image: "./image/20240608.jpg"
+    },
+    {
+      heading: "2024:06:12",
+      paragraph: "Богдхан амралт билүү дээ тэ. Тийшээ нэг очиж хөөрхөн болзоо хийгээд модод дунд явж байхад ийм гоё горхи? хүрхрээ? таарсан тэ хайр ٩(^‿^)۶",
+      image: "./image/20240612.jpg"
+    },
+    {
+      heading: "2024:06:12",
+      paragraph: "Энэ бичлэг нь",
+      image: "./video/20240612.mp4"
+    },
+    {
+      heading: "2024:07:13",
+      paragraph: "Ингээд л хайр нь цэрэгт явж байгаа юм даа T-T Хөөрхөн хайрыгаа бодож, санаж хичнээн уйлсан гэж санана. Ёоо ер нь цэргийн алба нь өөрөө хэцүү биш, хайрыгаа санах нь хамгийн хэцүү нь байсан дөө. ",
+      image: "./image/20240713.jpg"
+    },
+    {
+      heading: "2024:07:13",
+      paragraph: "Бид хоёрын хамгийн гоё зургуудын нэг гэж хувьдаа боддог.",
+      image: "./image/20240713a.jpg"
+    },
+    {
+      heading: "2024:08:13",
+      paragraph: "Зиа ингээд амьдралын минь хамгийн гоё өдрүүд эхэллээ дээ. Мэлхий хад дээр ирээд дарж билээ. Хахах анх удаагаа мэдхий хад харж байгаа энэ шд хД. Тэр цаана миний хайр байгаа шдээ (¬,‿,¬)",
+      image: "./image/20240813.jpg"
+    },
+    {
+      heading: "2024:08:13",
+      paragraph: "Энэ бичлэг нь",
+      image: "./video/20240813.mp4"
+    },
+    {
+      heading: "2024:08:14",
+      paragraph: "Хамгийн эхний шөнөө өнгөрүүлчихээд өглөө боссон нь. (aimr documentary shig te hahah)",
+      image: "./image/20240814.jpg"
+    },
+    {
+      heading: "2024:08:14",
+      paragraph: "Энэ яг хортой мөөг байсан байх аа хаха(•-•)⌐",
+      image: "./image/20240814a.jpg"
+    },
+    {
+      heading: "2024:08:14",
+      paragraph: "Нээрээ ийм хөөрхөн хэрэм харсан шдээ.",
+      image: "./video/20240814.mp4"
+    },
+    {
+      heading: "2024:08:18",
+      paragraph: "Голын эрэг орох гээд бас хөөрхөн хол зам алхсан тэ. Тэнд хуримын зураг татуулж байсан хэдэн хүмүүс байж билээ. Би чинь дотроо 'Энхжинтэйгээ хэзээ нэг өдөр...' гэж бодсон шд ххи",
+      image: "./image/20240818.jpg"
+    },
+    {
+      heading: "2024:08:18",
+      paragraph: "Тэндээ зөндөө хөөрхөн зураг дарж билээ. (Хайрынхаа булбрай хөөрхөн гарыг нь саначихлаа T-T)",
+      image: "./image/20240818a.jpg"
+    },
+    {
+      heading: "2024:08:18",
+      paragraph: "Янаааагггг",
+      image: "./image/20240818b.jpg"
+    },
+    {
+      heading: "2024:08:18",
+      paragraph: "Энэ гэхдээ аймар гоё гаржээ (๑•́ ヮ •̀๑)",
+      image: "./image/20240818c.jpg"
+    },
+    {
+      heading: "2024:08:19",
+      paragraph: "Нөгөө аймар challenge туулсан өдөр байна шдээ хД. Хайрынхаа зургыг зөндөө дарсан тэ. Бүгд аймар хөөрхөн гарсаан. Ёоо гэхдээ ямар гоё байсан юм бэ (๑•́ ヮ •̀๑)",
+      image: "./image/240819.jpg"
+    },
+    {
+      heading: "2024:08:19",
+      paragraph: "Өнөөх айхтар хүйтэн голыг туулаад ус уух гээд тэ хД. Хаха гэхдээ зуны халуунд яаж тийм хүйтэн байдаг байна даа. За тэр ч яахав энэ хөөрхөн охиныг хараачээ.",
+      image: "./image/240819a.jpg"
+    },
+    {
+      heading: "2024:08:19",
+      paragraph: "Уул өөд мацаж гараад хийчихээд chill-рээд сууж байсан үе тэ хД ",
+      image: "./image/240819b.jpg"
+    },
+    {
+      heading: "2024:08:19",
+      paragraph: "Буцах замдаа нөгөө баасаар байлдаад хахаха. Ниэээ бодсон чинь хөөрхөн хайрлуугаа арай хүчтэй шидээд уйлуулчихсан нум байна жүү дээ T-T",
+      image: "./image/240819c.jpg"
+    },
+    {
+      heading: "2024:08:22",
+      paragraph: "Video Call хийгээд байж байх даа ярьсан даа санаж байна уу?. Холын харилцаанд орохдоо ингээд л байж байна байх даа гээд хД. Яг л одооных шигээ (◡︵◡)",
+      image: "./image/240822.png"
+    },
+    {
+      heading: "2024:09:07",
+      paragraph: "Шинэ парк энэ үед хамтдаа анх удаа орсон тэ? Нэг ийм сонин заваан юм харж билээ хаха. (Наанаа миний хайр нь айчихвий дээ)",
+      image: "./image/240907.jpg"
+    },
+    {
+      heading: "2024:09:07",
+      paragraph: "Хахах энэ бүр татаанаааааа",
+      image: "./image/240907a.jpg"
+    },
+    {
+      heading: "2024:09:07",
+      paragraph: "Хоёр дүү нараа аваад хөөрхөн гарсан тийм ээ хайраа (˶‾᷄ ⁻̫ ‾᷅˵)",
+      image: "./video/240907.mp4"
+    },
+    {
+      heading: "2024:09:12",
+      paragraph: "Юу билээ хД Байгалийн сайханд хүний сайнуудтай билүү ххэ. Энэ үед ч бас маш гоё байсан даа. Хайрыгаа харин шөнө их муухай юм болж уурлуулсан даа хаха. Гэхдээ өглөө нь хариуг нь барьсан тийм ээ? анс хаха. Их гоё байсан шүү. Дараа дахиад ингээд явмаар байна (•̀ᴗ•́)و ̑̑",
+      image: "./image/240912.jpg"
+    },
+    {
+      heading: "2024:09:21",
+      paragraph: "Нөгөө балай ажил дээр цалингаа муриулаад их тоогүй юм болсон доо. Гэхдээ юу гээч? Чамтай хамт байсан болохоор огтоосоо харамсаагүй ээ. Энэ хар л даа, ийм хөөрхөн байчихаад наж харамсаж байдаг юм дийм ээ хайраа",
+      image: "./image/240921.jpg"
+    },
+    {
+      heading: "2024:09:21",
+      paragraph: "Аймааааар хөөрхөнннннн ＼(＾O＾)／",
+      image: "./image/240921a.jpg"
+    },
+    {
+      heading: "2024:09:22",
+      paragraph: "Нээрээ парк орсон шүү дээ. Ёооё гэхдээ яасан гоё гарсан юм бэ хоёулаа (≧∇≦*)",
+      image: "./image/240922.jpg"
+    },
+    {
+      heading: "2024:09:22",
+      paragraph: "Хөөрхөн silly зураг авхуулаад л. Хөөрхөн хосууд юм ааааа ɾ⚈▿⚈ɹ",
+      image: "./image/240922a.jpg"
+    },
+    {
+      heading: "2024:09:22",
+      paragraph: "Хайрын тэр байж байгааг нь эээээ >-<",
+      image: "./image/240922b.jpg"
+    },
+    {
+      heading: "2024:09:22",
+      paragraph: "OMO OMO Тэр нар жаргаж байгааг T-T Эннээс үзэсгэлэнтэй юм гэвэл миний хайр л юм даа (∩´∀`)∩",
+      image: "./image/240922c.jpg"
+    },
+    {
+      heading: "2024:09:27",
+      paragraph: "Танайд ингээд хөөрхөн 360 зураг туршиж үзээд тэ хД ",
+      image: "./image/240927.jpg"
+    },
+    {
+      heading: "2024:09:27",
+      paragraph: "Энэ харин миний хөөрхөн хайр (´へωへ`*)",
+      image: "./image/240927a.jpg"
+    },
+    {
+      heading: "2024:09:29",
+      paragraph: "Манайд ингээд хийж билээ. Наасан хөөрхөн юм дээ >-<  Гөлийчихөөд би хооронд нь наалдуулчихаж билээ хаха",
+      image: "./image/240929.jpg"
+    },
+    {
+      heading: "2024:09:29",
+      paragraph: "Одоо хүртэл хадгалж явдаг шд тийм ээ миний хайр ヾ(｡･ω･｡)",
+      image: "./image/240929a.jpg"
+    },
+    {
+      heading: "2024:10:01",
+      paragraph: "Нөгөө хөөрхөн тоглоомыг энэ үед тоглосон нум байна жүү дээ хайраа. Энэ аймар хөөрхөн тэ хх (*‿*✿)",
+      image: "./image/241001.png"
+    },
+    {
+      heading: "2024:10:03",
+      paragraph: "Энэ хоорни охинг хараачээ ( ͡° ͜ʖ ͡°)   4 дэх өдөр байсан болохоор хайр нь хичээлээ тарчихаад манайд очиж жаал тоглож байгаа цааш явсан даа...",
+      image: "./image/241003.png"
+    },
+    {
+      heading: "2024:10:03",
+      paragraph: "Энэхүү өдрийг Say Cheese-ээр эхлүүлсэн дээ. Ёоо харахад яасан гоё бэ, уйлах нь T-T  Дараа дахиад заавал зургаа ингэж даруулна шүү (◍•ᴗ•◍)❤  Амлая хх ",
+      image: "./video/saycheese.mp4"
+    },
+    {
+      heading: "2024:10:03",
+      paragraph: "Coffee Shop ороод янз янзын хөөрхөн яриа өрнүүлээд. Миний жүлхийг хөөрхөн яриа, төрхөөрөө догдлуулаад (◕‿◕✿). ",
+      image: "./image/241003a.jpg"
+    },
+    {
+      heading: "2024:10:03",
+      paragraph: "Миний хайрын зурсан панда хамгийн хөөрхөн нь (｡◝‿◜｡)",
+      image: "./image/241003b.jpg"
+    },
+    {
+      heading: "2024:10:03",
+      paragraph: "Энэ амлалтыг заавал биелүүлнэ шүү хайраа (人 •͈ᴗ•͈) (Гэхдээ хоёулаа салахгүй болохоор 'юу ч болж байсан' гэдэг нь худлаа л даа ххэ)",
+      image: "./image/241003c.jpg"
+    },
+    {
+      heading: "2024:10:05",
+      paragraph: "Энэ үед дахиад шинэ парк орсон шд хайр. Хөөрхөн хайрыгаа 00 орох зуур анс хх(｡◝‿◜｡)",
+      image: "./image/241005.jpg"
+    },
+    {
+      heading: "2024:10:05",
+      paragraph: "Ёооё орой нь хамт хоноод бүр үлгэр юм бэээээээээээээээ ヾ(＠⌒ー⌒＠)ノ",
+      image: "./video/241005.mp4"
+    },
+    {
+      heading: "2024:10:07",
+      paragraph: "Уйлмаар өдөр байсан шүү. Миний хайр яг явах гээд л... T-T Орцонд ингээд уулзаад сууж байгаа нь л маш том жаргал байсан ингээд боддоо. Ядаж байхад нь ийм хөөрхөн цагаан муур хүрч ирээд эрхлээд л (っ- ‸ – ς)",
+      image: "./image/241007.jpg"
+    },
+    {
+      heading: "2024:10:07",
+      paragraph: "(っ- ‸ – ς)",
+      image: "./video/241007.mp4"
+    },
+    ];
+
+    function renderPosts() {
+      const wrapper = document.querySelector('.wrapper');
+      wrapper.innerHTML = ""; // Clear existing content
+  
+      posts.forEach(post => {
+          const postDiv = document.createElement('div');
+          postDiv.className = 'box';
+  
+          let mediaElement = "";
+          if (/\.(mp4|webm|ogg)$/i.test(post.image)) {
+              let mimeType = post.image.endsWith(".webm") ? "video/webm" : 
+                             post.image.endsWith(".ogg") ? "video/ogg" : 
+                             "video/mp4";
+              mediaElement = `<video controls width="100%">
+                                  <source src="${post.image}" type="${mimeType}">
+                                  Your browser does not support the video tag.
+                              </video>`;
+          } else {
+              mediaElement = `<img src="${post.image}" alt="Image for ${post.heading}">`;
+          }
+  
+          postDiv.innerHTML = `
+              <h1>${post.heading}</h1>
+              <p>${post.paragraph}</p>
+              ${mediaElement}
+          `;
+          wrapper.appendChild(postDiv); 
+      });
+  }
+  
+
+    renderPosts();
+  </script>
+    
+    
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
