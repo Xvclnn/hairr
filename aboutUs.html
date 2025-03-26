@@ -536,15 +536,17 @@ Ingl tgsn cn hair n jooxnoro tme xd  -->
     ];
 
     function renderPosts() {
-      const wrapper = document.querySelector('.wrapper');
-      wrapper.innerHTML = ""; // Clear existing content
-  
-      posts.forEach(post => {
-          const postDiv = document.createElement('div');
-          postDiv.className = 'box';
-  
-          let mediaElement = "";
-         if (/\.(mp4|webm|ogg)$/i.test(post.image)) {
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.innerHTML = ""; // Clear existing content
+
+    posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.className = 'box';
+
+        let mediaElement = "";
+        
+        // Check for video formats (mp4, webm, ogg)
+        if (/\.(mp4|webm|ogg)$/i.test(post.image)) {
             let mimeType = post.image.endsWith(".webm") ? "video/webm" : 
                            post.image.endsWith(".ogg") ? "video/ogg" : 
                            "video/mp4";
@@ -552,21 +554,37 @@ Ingl tgsn cn hair n jooxnoro tme xd  -->
                                 <source src="${post.image}" type="${mimeType}">
                                 Your browser does not support the video tag.
                             </video>`;
-          } else if (post.image.includes("drive.google.com")) {
-              // Google Drive embed handling
-              mediaElement = `<iframe src="${post.image}" width="640" height="480" allow="autoplay"></iframe>`;
-          } else {
-              mediaElement = `<img src="${post.image}" alt="Image for ${post.heading}">`;
-          } 
-  
-          postDiv.innerHTML = `
-              <h1>${post.heading}</h1>
-              <p>${post.paragraph}</p>
-              ${mediaElement}
-          `;
-          wrapper.appendChild(postDiv); 
-      });
-  }
+        } 
+        // Check for Google Drive links and convert to preview format
+        else if (post.image.includes("drive.google.com")) {
+            const fileId = post.image.match(/\/d\/(.*?)(\/|$)/); // Extract file ID
+            if (fileId && fileId[1]) {
+                mediaElement = `<iframe src="https://drive.google.com/file/d/${fileId[1]}/preview" width="640" height="480"></iframe>`;
+            } else {
+                mediaElement = "Invalid Google Drive link.";
+            }
+        } 
+        // Check for YouTube links and embed them
+        else if (post.image.includes("youtube.com") || post.image.includes("youtu.be")) {
+            const videoId = post.image.split("/").pop().split("?")[0]; // Get the video ID
+            mediaElement = `<iframe src="https://www.youtube.com/embed/${videoId}" width="640" height="480" frameborder="0" allowfullscreen></iframe>`;
+        } 
+        // Otherwise, treat it as an image
+        else {
+            mediaElement = `<img src="${post.image}" alt="Image for ${post.heading}">`;
+        }
+
+        postDiv.innerHTML = `
+            <h1>${post.heading}</h1>
+            <p>${post.paragraph}</p>
+            ${mediaElement}
+        `;
+        wrapper.appendChild(postDiv);
+    });
+    }
+
+renderPosts();
+
   
 
     renderPosts();
